@@ -49,4 +49,19 @@ Bridge on-premises infrastructure with modern cloud-native endpoint administrati
 ---
 
 ## 📸 Lab Evidence
-*(Add screenshots of your Microsoft Entra ID device inventory showing `WIN11-CLIENT01` under Microsoft Intune management and your Intune compliance policy status dashboard here inside an `images/` folder)*
+
+### 1. Entra ID Security Group (`SG_M365_BusinessPremium`)
+Cloud security group provisioned for automated Microsoft 365 Business Premium group-based licensing.
+![Entra ID Security Group](Security%20Group.png)
+
+### 2. Automatic MDM Enrollment Scope
+Microsoft Intune MDM user scope configured in Entra ID to trigger automatic enrollment upon user sign-in.
+![Automatic MDM Enrollment Scope](mdm-scope.png)
+
+### 3. Intune Device Inventory & Compliance Status
+`WIN11-CLIENT01` enrolled under Microsoft Intune MDM management and verified as **Compliant** against the `WIN11-Security-Compliance` baseline.
+![Intune Device Compliance](Windows%2011%20Client.png)
+
+### 4. Client-Side MDM Connection (`WIN11-CLIENT01`)
+Endpoint verification in Windows Settings confirming connection to the `ApexTech99.onmicrosoft.com` tenant and active Apex Tech MDM management.
+![Windows 11 MDM Connection](Windows%2011%20sync.png)
